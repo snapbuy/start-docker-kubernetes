@@ -1,14 +1,14 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: admin-user
+  name: jason
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
   name: cluster-admin
 subjects:
 - kind: ServiceAccount
-  name: admin-user
+  name: jason
   namespace: kubernetes-dashboard
 
-#kubectl -n kubernetes-dashboard create token admin-user
+#kubectl -n kubernetes-dashboard create token jason
